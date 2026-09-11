@@ -1,0 +1,144 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const yesoServices = [
+  {
+    title: "Tabiques Divisorios Acústicos y Térmicos",
+    desc: "Estructuras de acero galvanizado con doble placa de yeso y aislante interior de lana de vidrio o roca. Ideal para dividir oficinas o dormitorios con máxima privacidad.",
+    urgente: false
+  },
+  {
+    title: "Cielorrasos Continuos en Yeso Junta Tomada",
+    desc: "Cielorrasos suspendidos impecablemente nivelados, con masillado de cintas microperforadas y lijado fino listo para pintar sin fisuras visibles.",
+    urgente: false
+  },
+  {
+    title: "Cielorrasos Desmontables para Locales y Oficinas",
+    desc: "Placas termoacústicas desmontables (60x60 o 60x120 cm) con perfilería vista prepintada, facilitando el acceso rápido a cañerías, cableados y aires acondicionados.",
+    urgente: false
+  },
+  {
+    title: "Cajones y Fajas para Iluminación LED Indirecta",
+    desc: "Diseño y armado de gargantas difusas perimetrales, cajones para cortineros empotrados y frentes suspendidos para instalar tiras de LED o spots embutidos.",
+    urgente: false
+  },
+  {
+    title: "Nichos Decorativos y Muebles de Yeso",
+    desc: "Estanterías a medida, bibliotecas empotradas, nichos con iluminación integrada y frentes modernos para televisores Smart TV de gran formato.",
+    urgente: false
+  },
+  {
+    title: "Placas Verdes Resistentes a la Humedad (RU)",
+    desc: "Instalación especializada de placas hidrófugas con aditivos siliconados en baños, cocinas y lavaderos para soporte firme de cerámicas y porcelanatos.",
+    urgente: false
+  }
+];
+
+const whatsappUrl = "https://wa.me/59896219719?text=Hola%2C%20quisiera%20solicitar%20presupuesto%20para%20Yeso%20y%20Drywall.";
+---
+
+<Layout
+  title="Drywall, Yeso y Cielorrasos Desmontables | SINAI"
+  description="Construcción en seco y yeso en Montevideo y Canelones: Tabiques acústicos, cielorrasos continuos y desmontables, fajas LED y nichos. Facturación oficial con RUT. Andrés y Verónica."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950 text-white py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-600/30 border border-indigo-500/40 text-indigo-300 text-xs font-bold uppercase tracking-wider mb-6">
+          <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+          <span>Construcción en Seco • Obra Limpia y Rápida • RUT Oficial</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+          Drywall, Yeso y Cielorrasos en Uruguay
+        </h1>
+
+        <p class="mt-6 text-base sm:text-xl text-slate-300 leading-relaxed">
+          Transforma tus espacios sin obras húmedas pesadas ni demoras innecesarias. Cielorrasos continuos, desmontables y tabiques acústicos de terminación perfecta coordinados por <strong class="text-white">Andrés y Verónica</strong>.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-7 py-4 rounded-2xl shadow-xl shadow-emerald-600/30 text-base transition-all"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span>Pedir Presupuesto por WhatsApp</span>
+          </a>
+
+          <a
+            href="tel:+59896219719"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-bold px-7 py-4 rounded-2xl border border-slate-700 text-base transition-all"
+          >
+            <span>Llamar: 096 219 719</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed services -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          Sistemas en Yeso para Hogares y Comercios
+        </h2>
+        <p class="mt-3 text-base text-slate-600">
+          Perfilería de acero certificada y placas de yeso estándar, ignífugas o antihumedad según las exigencias del local.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {yesoServices.map((srv) => (
+          <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  </svg>
+                </span>
+                <span class="text-xs font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2.5 py-0.5 rounded-full">
+                  Terminación Fina
+                </span>
+              </div>
+
+              <h3 class="text-xl font-black text-slate-900 mb-2">{srv.title}</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">{srv.desc}</p>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-slate-100">
+              <a
+                href={`https://wa.me/59896219719?text=${encodeURIComponent(`Hola Andrés y Verónica, consulto por presupuesto para ${srv.title}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-indigo-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors"
+              >
+                Cotizar este trabajo por WhatsApp
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Form integration -->
+  <ContactForm />
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>

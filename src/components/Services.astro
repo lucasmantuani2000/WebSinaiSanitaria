@@ -3,6 +3,7 @@ const services = [
   {
     id: "sanitaria",
     name: "Sanitaria Integral y Urgencias",
+    href: "/servicios/sanitaria",
     badge: "Urgencias 24/7",
     badgeColor: "bg-red-100 text-red-700 border-red-200",
     description: "Atención inmediata de pérdidas de agua, roturas de caños, destapes con máquina de alta presión y obras de sanitaria completas con cañerías termofusión y PVC.",
@@ -21,6 +22,7 @@ const services = [
   {
     id: "herreria",
     name: "Herrería de Obra y Seguridad",
+    href: "/servicios/herreria",
     badge: "Trabajos a Medida",
     badgeColor: "bg-slate-100 text-slate-700 border-slate-200",
     description: "Diseño, fabricación, montaje y reparación de estructuras metálicas resistentes y duraderas para casas, edificios, industrias y locales comerciales.",
@@ -39,6 +41,7 @@ const services = [
   {
     id: "albanileria",
     name: "Albañilería y Reformas Integrales",
+    href: "/servicios/albanileria",
     badge: "Llave en Mano",
     badgeColor: "bg-blue-100 text-blue-700 border-blue-200",
     description: "Ejecución de reformas generales con mano de obra calificada, respetando plazos acordados y limpieza permanente en el lugar de trabajo.",
@@ -57,6 +60,7 @@ const services = [
   {
     id: "impermeabilizaciones",
     name: "Impermeabilizaciones y Aislaciones",
+    href: "/servicios/impermeabilizacion",
     badge: "Garantía Escrita",
     badgeColor: "bg-emerald-100 text-emerald-700 border-emerald-200",
     description: "Soluciones definitivas contra filtraciones, goteras y humedad en azoteas, techos de chapa o losa, balcones y muros de contención.",
@@ -75,6 +79,7 @@ const services = [
   {
     id: "drywall",
     name: "Drywall y Construcción en Yeso",
+    href: "/servicios/yeso",
     badge: "Rápido y Limpio",
     badgeColor: "bg-indigo-100 text-indigo-700 border-indigo-200",
     description: "Sistemas de construcción en seco para divisiones de ambientes, aislamiento térmico-acústico y terminaciones estéticas modernas.",
@@ -93,6 +98,7 @@ const services = [
   {
     id: "pintura",
     name: "Pintura Profesional Interior y Exterior",
+    href: "/servicios/pintura",
     badge: "Terminación Premium",
     badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
     description: "Trabajos de pintura con preparación rigurosa de superficies (lijado, hidrolavado, sellador y enduido) para una durabilidad garantizada.",
@@ -111,6 +117,7 @@ const services = [
   {
     id: "limpieza",
     name: "Limpieza Final de Obra y Jardinería",
+    href: "/servicios/limpieza-jardineria",
     badge: "Entrega Impecable",
     badgeColor: "bg-teal-100 text-teal-800 border-teal-200",
     description: "Limpieza profunda para entregas de reformas o construcciones, así como mantenimiento y acondicionamiento integral de predios y jardines.",
@@ -173,7 +180,9 @@ const services = [
             </div>
 
             <h3 class="text-xl sm:text-2xl font-black text-slate-900 mb-3 tracking-tight">
-              {service.name}
+              <a href={service.href} class="hover:text-blue-600 transition-colors">
+                {service.name}
+              </a>
             </h3>
 
             <p class="text-sm text-slate-600 mb-6 leading-relaxed">
@@ -213,11 +222,13 @@ const services = [
               </svg>
               <span>{service.actionText}</span>
             </a>
+
             <a
-              href="#contacto"
-              class="text-center text-xs font-semibold text-slate-500 hover:text-blue-600 transition-colors py-1"
+              href={service.href}
+              class="text-center text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors py-1 flex items-center justify-center gap-1"
             >
-              O consultar vía formulario web →
+              <span>Ver página completa de {service.name.split(' ')[0]}</span>
+              <span>→</span>
             </a>
           </div>
         </div>

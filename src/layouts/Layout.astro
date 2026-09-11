@@ -62,13 +62,13 @@ const jsonLd = {
     "@type": "OfferCatalog",
     "name": "Servicios de Mantenimiento",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sanitaria de Urgencia y Obras" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Herrería de Obra y Estructuras" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Albañilería y Reformas" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Impermeabilización de Azoteas y Techos" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drywall y Cielorrasos de Yeso" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura de Interiores y Fachadas" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de Obra y Parquizaciones" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sanitaria de Urgencia y Obras", "url": new URL("/servicios/sanitaria", siteUrl).toString() } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Herrería de Obra y Estructuras", "url": new URL("/servicios/herreria", siteUrl).toString() } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Albañilería y Reformas", "url": new URL("/servicios/albanileria", siteUrl).toString() } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Impermeabilización de Azoteas y Techos", "url": new URL("/servicios/impermeabilizacion", siteUrl).toString() } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drywall y Cielorrasos de Yeso", "url": new URL("/servicios/yeso", siteUrl).toString() } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura de Interiores y Fachadas", "url": new URL("/servicios/pintura", siteUrl).toString() } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de Obra y Parquizaciones", "url": new URL("/servicios/limpieza-jardineria", siteUrl).toString() } }
     ]
   }
 };

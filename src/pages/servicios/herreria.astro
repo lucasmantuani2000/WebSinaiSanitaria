@@ -1,0 +1,146 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+const herreriaServices = [
+  {
+    title: "Rejas de Seguridad para Puertas y Ventanas",
+    desc: "Fabricación a medida con perfiles de hierro macizo, tubulares y mallas electrosoldadas. Diseños modernos o tradicionales con pintura anticorrosiva de alta durabilidad.",
+    urgente: false
+  },
+  {
+    title: "Portones Batientes y Corredizos",
+    desc: "Portones residenciales y comerciales manuales o con automatización instalada. Guías reforzadas, ruedas con rulemanes blindados y cerrojos de seguridad.",
+    urgente: false
+  },
+  {
+    title: "Estructuras Metálicas y Tinglados",
+    desc: "Cálculo y montaje de estructuras metálicas livianas y pesadas para galpones, depósitos, aleros, galerías y entrepisos metálicos con perfiles IPN o UPN.",
+    urgente: false
+  },
+  {
+    title: "Barandas para Escaleras y Balcones",
+    desc: "Barandas de hierro forjado, perfiles tubulares o combinadas con chapa perforada. Fijaciones de máxima resistencia para cumplir con normativas de seguridad edilicia.",
+    urgente: false
+  },
+  {
+    title: "Pérgolas Metálicas y Cobertizos",
+    desc: "Estructuras aéreas resistentes a vientos y lluvias para cocheras, terrazas y jardines, preparadas para cubiertas de policarbonato, chapa trapezoidal o toldos.",
+    urgente: false
+  },
+  {
+    title: "Soldaduras in Situ y Reparaciones de Urgencia",
+    desc: "Servicio de soldadora inverter a domicilio para solucionar bisagras partidas, trabas forzadas, rejas arrancadas o roturas tras intentos de intrusión.",
+    urgente: true
+  }
+];
+
+const whatsappUrl = "https://wa.me/59896219719?text=Hola%2C%20quisiera%20solicitar%20presupuesto%20para%20trabajos%20de%20Herrer%C3%ADa.";
+---
+
+<Layout
+  title="Herrería de Obra y Seguridad en Montevideo | SINAI"
+  description="Herrería de obra y estructuras en Montevideo y Canelones: Rejas de seguridad, portones, pérgolas, barandas y soldaduras de urgencia. Factura oficial con RUT. Atención 365 días por Andrés y Verónica."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 text-white py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-wider mb-6">
+          <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+          <span>Herrería de Obra • Facturación con RUT • 365 Días</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+          Herrería de Obra y Seguridad en Montevideo
+        </h1>
+
+        <p class="mt-6 text-base sm:text-xl text-slate-300 leading-relaxed">
+          Protege y valoriza tu propiedad con estructuras metálicas de máxima resistencia. Fabricamos e instalamos a medida para casas, edificios y comercios con la supervisión directa de <strong class="text-white">Andrés y Verónica</strong>.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-7 py-4 rounded-2xl shadow-xl shadow-emerald-600/30 text-base transition-all"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span>Pedir Presupuesto por WhatsApp</span>
+          </a>
+
+          <a
+            href="tel:+59896219719"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-bold px-7 py-4 rounded-2xl border border-slate-700 text-base transition-all"
+          >
+            <span>Llamar: 096 219 719</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed services -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          Trabajos de Herrería Especializada
+        </h2>
+        <p class="mt-3 text-base text-slate-600">
+          Utilizamos aceros estructurales y soldaduras de precisión con acabados pulidos y tratamiento anticorrosivo integral.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {herreriaServices.map((srv) => (
+          <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center font-bold">
+                  <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                </span>
+                {srv.urgente && (
+                  <span class="text-xs font-bold text-red-600 bg-red-50 border border-red-200 px-2.5 py-0.5 rounded-full">
+                    Guardia Activa
+                  </span>
+                )}
+              </div>
+
+              <h3 class="text-xl font-black text-slate-900 mb-2">{srv.title}</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">{srv.desc}</p>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-slate-100">
+              <a
+                href={`https://wa.me/59896219719?text=${encodeURIComponent(`Hola Andrés y Verónica, consulto por presupuesto para ${srv.title}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors"
+              >
+                Cotizar este trabajo por WhatsApp
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Form integration -->
+  <ContactForm />
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>
