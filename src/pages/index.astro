@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import UrgencyBanner from '../components/UrgencyBanner.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import WhyUs from '../components/WhyUs.astro';
+import CoverageAreas from '../components/CoverageAreas.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<Layout
+  title="Sinai Mantenimiento Integral | Sanitaria, Reformas y Urgencias en Uruguay"
+  description="Servicios profesionales de mantenimiento integral en Uruguay: Sanitaria 24/7, Herrería, Albañilería, Impermeabilizaciones, Drywall/Yeso, Pintura y Limpieza. Facturación con RUT. Atendido por Andrés y Verónica."
+>
+  <Header />
+  <UrgencyBanner />
+  <main>
+    <Hero />
+    <Services />
+    <WhyUs />
+    <CoverageAreas />
+    <Testimonials />
+    <FAQ />
+    <ContactForm />
+  </main>
+  <Footer />
+  <WhatsAppButton />
+</Layout>

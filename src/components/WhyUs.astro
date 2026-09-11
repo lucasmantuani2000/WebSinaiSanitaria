@@ -1,0 +1,107 @@
+---
+const reasons = [
+  {
+    title: "Atención Real los 365 Días",
+    description: "Las emergencias de agua, roturas o cerrajería no eligen horario de oficina. En Sinai Mantenimiento mantenemos guardia activa fines de semana y feriados.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />`
+  },
+  {
+    title: "Facturación Oficial con RUT",
+    description: "Somos una empresa constituida con todas las exigencias legales. Emitimos facturas oficiales con RUT para empresas, complejos habitacionales, edificios y locales comerciales.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />`
+  },
+  {
+    title: "Compromiso de Andrés y Verónica",
+    description: "No delegamos tu tranquilidad en intermediarios anónimos. Coordinamos personalmente las visitas, los presupuestos y la supervisión del equipo de trabajo.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />`
+  },
+  {
+    title: "Solución Multirubro en 1 Sola Empresa",
+    description: "Si arreglas un caño que rompe una pared, te reparamos la sanitaria, rehacemos el revoque, colocamos la cerámica y pintamos. Todo coordinado y sin baches de tiempo.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />`
+  },
+  {
+    title: "Presupuestos Claros y Sin Sorpresas",
+    description: "Detallamos los materiales y la mano de obra de forma transparente. Sabrás exactamente qué se va a realizar, el tiempo estimado y el costo final sin recargos inventados.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />`
+  },
+  {
+    title: "Garantía Escrita y Materiales de Calidad",
+    description: "Trabajamos únicamente con marcas homologadas y normadas en Uruguay (Tigre, Amanco, Sika, etc.), asegurando máxima durabilidad y respaldo técnico en cada entrega.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`
+  }
+];
+---
+
+<section id="diferenciales" class="py-20 lg:py-28 bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left text -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+          ¿Por Qué Elegirnos?
+        </div>
+        
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          La Tranquilidad de un Servicio Responsable y Profesional en Uruguay
+        </h2>
+
+        <p class="text-base text-slate-600 leading-relaxed">
+          En el rubro del mantenimiento es común sufrir informalidad, demoras y trabajos sin garantía. En <strong>Sinai Mantenimiento</strong> apostamos por una relación transparente a largo plazo con cada cliente, avalada por facturación oficial y la presencia constante de Andrés y Verónica.
+        </p>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">
+              RUT
+            </div>
+            <div>
+              <div class="text-sm font-bold text-slate-900">Apto Empresas y Consorcios</div>
+              <div class="text-xs text-slate-500">Rendición de cuentas para administraciones</div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600">
+            Facilitamos todos los comprobantes tributarios necesarios para que administradores de copropiedad e inquilinos puedan liquidar gastos comunes sin complicaciones.
+          </p>
+        </div>
+
+        <div class="pt-2">
+          <a
+            href="https://wa.me/59896219719?text=Hola%20Andr%C3%A9s%20y%20Ver%C3%B3nica,%20quiero%20conocer%20m%C3%A1s%20sobre%20sus%20servicios"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-blue-600 font-bold hover:text-blue-700 text-sm group"
+          >
+            <span>Consultar directamente con Andrés o Verónica</span>
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right grid of reasons -->
+      <div class="lg:col-span-7">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {reasons.map((reason) => (
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:bg-white transition-all duration-200 shadow-sm hover:shadow-md">
+              <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-600 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={reason.icon} />
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-2">
+                {reason.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                {reason.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

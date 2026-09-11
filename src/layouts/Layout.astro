@@ -1,0 +1,117 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const {
+  title = "Sinai Mantenimiento Integral | Sanitaria, Reformas y Mantenimiento en Uruguay",
+  description = "Mantenimiento integral en Uruguay: Sanitaria de urgencia 24/7, herrería, albañilería, impermeabilizaciones, yeso y pintura. Facturación oficial con RUT. Atención 365 días por Andrés y Verónica.",
+  canonical = "https://sinaimantenimiento.uy",
+  ogImage = "/images/og-image.jpg"
+} = Astro.props;
+
+const siteUrl = Astro.site ? Astro.site.toString() : "https://sinaimantenimiento.uy";
+const fullCanonical = new URL(Astro.url.pathname, siteUrl).toString();
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Sinai Mantenimiento Integral",
+  "alternateName": "Sinai Sanitaria y Servicios",
+  "description": description,
+  "url": fullCanonical,
+  "telephone": "+59896219719",
+  "email": "vegaandres7321@gmail.com",
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Andrés"
+    },
+    {
+      "@type": "Person",
+      "name": "Verónica"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "UY",
+    "addressRegion": "Montevideo / Canelones",
+    "addressLocality": "Montevideo"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Montevideo" },
+    { "@type": "City", "name": "Ciudad de la Costa" },
+    { "@type": "AdministrativeArea", "name": "Canelones" },
+    { "@type": "Country", "name": "Uruguay" }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "priceRange": "$$",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Mantenimiento",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sanitaria de Urgencia y Obras" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Herrería de Obra y Estructuras" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Albañilería y Reformas" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Impermeabilización de Azoteas y Techos" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drywall y Cielorrasos de Yeso" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura de Interiores y Fachadas" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de Obra y Parquizaciones" } }
+    ]
+  }
+};
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="sanitaria uruguay, mantenimiento integral uruguay, sanitaria montevideo, sanitaria ciudad de la costa, plomero montevideo, destapes sanitarios, arreglo calefon montevideo, herreria montevideo, albañileria uruguay, impermeabilizaciones uruguay, pintura de obra, factura con rut sanitaria, sinai mantenimiento" />
+    <meta name="author" content="Sinai Mantenimiento" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={fullCanonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullCanonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="es_UY" />
+    <meta property="og:site_name" content="Sinai Mantenimiento Integral" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={fullCanonical} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2563EB" />
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-blue-600 selection:text-white">
+    <slot />
+  </body>
+</html>

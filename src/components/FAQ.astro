@@ -1,0 +1,85 @@
+---
+const faqs = [
+  {
+    question: "¿Atienden urgencias sanitarias los fines de semana y feriados?",
+    answer: "Sí. Contamos con guardia técnica activa los 365 días del año. Si sufres una rotura de caño, desborde de grasera o cámara, pérdida de agua o desperfecto en tu calefón, te respondemos de inmediato y coordinamos la cuadrilla para resolverlo en el día."
+  },
+  {
+    question: "¿Emiten factura oficial con RUT?",
+    answer: "Absolutamente. Sinai Mantenimiento es una empresa formal debidamente registrada ante DGI y BPS. Emitimos factura con RUT oficial para empresas, industrias, comercios, complejos habitacionales y administraciones de consorcios que necesiten rendición de gastos comunes."
+  },
+  {
+    question: "¿Cómo coordinamos una visita o presupuesto?",
+    answer: "Es muy sencillo: para trabajos puntuales o urgencias, puedes enviarnos fotos o un video corto al WhatsApp 096 219 719 y te damos un estimado rápido. Para reformas integrales, obras de albañilería o impermeabilizaciones, coordinamos una visita técnica en tu domicilio o local comercial."
+  },
+  {
+    question: "¿Pueden realizar varios rubros en una misma reforma?",
+    answer: "Esa es nuestra principal fortaleza. Por ejemplo, en la reforma de un baño o cocina nos encargamos de demoler, hacer la cañería sanitaria nueva a termofusión, colocar el yeso hidrófugo, enchapar cerámicas y pintar. Te ahorras tener que buscar y coordinar albañiles, sanitarios y pintores por separado."
+  },
+  {
+    question: "¿Quiénes son Andrés y Verónica y cuál es su rol?",
+    answer: "Andrés y Verónica son los titulares de Sinai Mantenimiento. Ellos atienden tus consultas, confeccionan los presupuestos, asignan el personal técnico calificado y supervisan la ejecución de las tareas para asegurar que todo quede impecable."
+  },
+  {
+    question: "¿Qué garantía tienen los trabajos de impermeabilización?",
+    answer: "En colocación de membrana asfáltica termo-adherida y sistemas impermeabilizantes de azoteas otorgamos garantía formal por escrito, respaldada por la correcta aplicación técnica y el uso de materiales de primera línea."
+  }
+];
+---
+
+<section class="py-20 bg-white border-b border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center mb-14">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4">
+        Preguntas Frecuentes
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Respuestas Claras a tus Consultas
+      </h2>
+      <p class="mt-3 text-base text-slate-600">
+        Información directa sobre nuestra modalidad de trabajo, facturación y garantías.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      {faqs.map((faq, idx) => (
+        <details class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all duration-200 open:bg-white open:border-blue-500 open:shadow-md">
+          <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-bold text-slate-900 text-base sm:text-lg list-none select-none">
+            <span class="flex items-center gap-3">
+              <span class="w-7 h-7 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-black shrink-0">
+                0{idx + 1}
+              </span>
+              <span>{faq.question}</span>
+            </span>
+            <span class="ml-4 shrink-0 transition-transform duration-200 group-open:rotate-180 text-blue-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="px-5 sm:px-6 pb-6 pt-1 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 group-open:block">
+            {faq.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <div class="mt-12 text-center p-6 bg-slate-50 rounded-2xl border border-slate-200">
+      <p class="text-sm text-slate-700 font-medium">
+        ¿Tienes otra consulta puntual que no figura aquí?
+      </p>
+      <div class="mt-3">
+        <a
+          href="https://wa.me/59896219719?text=Hola%20Andr%C3%A9s%20y%20Ver%C3%B3nica,%20tengo%20una%20consulta%20espec%C3%ADfica"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-bold text-sm"
+        >
+          <span>Escríbenos por WhatsApp y te respondemos al instante →</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
