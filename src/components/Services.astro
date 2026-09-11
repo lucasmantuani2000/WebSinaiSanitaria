@@ -4,6 +4,8 @@ const services = [
     id: "sanitaria",
     name: "Sanitaria Integral y Urgencias",
     href: "/servicios/sanitaria",
+    image: "/images/servicios/sanitaria.svg",
+    alt: "Servicio de Sanitaria y Destapes en Montevideo",
     badge: "Urgencias 24/7",
     badgeColor: "bg-red-100 text-red-700 border-red-200",
     description: "Atención inmediata de pérdidas de agua, roturas de caños, destapes con máquina de alta presión y obras de sanitaria completas con cañerías termofusión y PVC.",
@@ -23,6 +25,8 @@ const services = [
     id: "herreria",
     name: "Herrería de Obra y Seguridad",
     href: "/servicios/herreria",
+    image: "/images/servicios/herreria.svg",
+    alt: "Herrería de obra y rejas de seguridad en Montevideo",
     badge: "Trabajos a Medida",
     badgeColor: "bg-slate-100 text-slate-700 border-slate-200",
     description: "Diseño, fabricación, montaje y reparación de estructuras metálicas resistentes y duraderas para casas, edificios, industrias y locales comerciales.",
@@ -42,6 +46,8 @@ const services = [
     id: "albanileria",
     name: "Albañilería y Reformas Integrales",
     href: "/servicios/albanileria",
+    image: "/images/servicios/albanileria.svg",
+    alt: "Albañilería y colocación de porcelanato en Montevideo",
     badge: "Llave en Mano",
     badgeColor: "bg-blue-100 text-blue-700 border-blue-200",
     description: "Ejecución de reformas generales con mano de obra calificada, respetando plazos acordados y limpieza permanente en el lugar de trabajo.",
@@ -61,6 +67,8 @@ const services = [
     id: "impermeabilizaciones",
     name: "Impermeabilizaciones y Aislaciones",
     href: "/servicios/impermeabilizacion",
+    image: "/images/servicios/impermeabilizacion.svg",
+    alt: "Impermeabilización de azoteas con membrana en Montevideo",
     badge: "Garantía Escrita",
     badgeColor: "bg-emerald-100 text-emerald-700 border-emerald-200",
     description: "Soluciones definitivas contra filtraciones, goteras y humedad en azoteas, techos de chapa o losa, balcones y muros de contención.",
@@ -80,6 +88,8 @@ const services = [
     id: "drywall",
     name: "Drywall y Construcción en Yeso",
     href: "/servicios/yeso",
+    image: "/images/servicios/yeso.svg",
+    alt: "Drywall, yeso y cielorrasos en Montevideo",
     badge: "Rápido y Limpio",
     badgeColor: "bg-indigo-100 text-indigo-700 border-indigo-200",
     description: "Sistemas de construcción en seco para divisiones de ambientes, aislamiento térmico-acústico y terminaciones estéticas modernas.",
@@ -99,6 +109,8 @@ const services = [
     id: "pintura",
     name: "Pintura Profesional Interior y Exterior",
     href: "/servicios/pintura",
+    image: "/images/servicios/pintura.svg",
+    alt: "Pintura profesional de interiores y exteriores en Montevideo",
     badge: "Terminación Premium",
     badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
     description: "Trabajos de pintura con preparación rigurosa de superficies (lijado, hidrolavado, sellador y enduido) para una durabilidad garantizada.",
@@ -118,6 +130,8 @@ const services = [
     id: "limpieza",
     name: "Limpieza Final de Obra y Jardinería",
     href: "/servicios/limpieza-jardineria",
+    image: "/images/servicios/limpieza-jardineria.svg",
+    alt: "Limpieza final de obra y jardinería en Montevideo",
     badge: "Entrega Impecable",
     badgeColor: "bg-teal-100 text-teal-800 border-teal-200",
     description: "Limpieza profunda para entregas de reformas o construcciones, así como mantenimiento y acondicionamiento integral de predios y jardines.",
@@ -178,6 +192,19 @@ const services = [
                 0{index + 1}
               </span>
             </div>
+
+            <!-- Technical Image with Lazy Loading -->
+            <a href={service.href} class="block mb-5 overflow-hidden rounded-2xl bg-slate-900 aspect-[16/9] border border-slate-200/60 group/img">
+              <img
+                src={service.image}
+                alt={service.alt}
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="500"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105"
+              />
+            </a>
 
             <h3 class="text-xl sm:text-2xl font-black text-slate-900 mb-3 tracking-tight">
               <a href={service.href} class="hover:text-blue-600 transition-colors">

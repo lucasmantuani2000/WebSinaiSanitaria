@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import WorkGallery from '../../components/WorkGallery.astro';
 
 const limpiezaServices = [
   {
@@ -35,6 +36,33 @@ const limpiezaServices = [
     title: "Retiro y Disposición de Restos Vegetales",
     desc: "Carga y traslado responsable en camión de ramas, podas y escombros hacia los centros de disposición autorizados de las intendencias correspondientes.",
     urgente: false
+  }
+];
+
+const galleryItems = [
+  {
+    title: "Limpieza profunda fin de obra en edificio de apartamentos",
+    description: "Desincrustado químico no agresivo de 12 unidades nuevas, retiro de siliconas en cristales y aspirado de polvillo fino de yeso.",
+    location: "Pocitos, Montevideo",
+    image: "/images/servicios/limpieza-jardineria.svg",
+    alt: "Limpieza final de obra en edificio en Pocitos Montevideo",
+    tag: "Entrega Inmediata"
+  },
+  {
+    title: "Mantenimiento de parque y corte de césped en predio",
+    description: "Corte con tractor desmalezador y motoguadaña en terreno de 1.800m², perfilado de cercos perimetrales y desmalezado de canteros.",
+    location: "Solymar, Canelones",
+    image: "/images/servicios/limpieza-jardineria.svg",
+    alt: "Corte de césped y mantenimiento de jardín en Solymar Canelones",
+    tag: "Parquización"
+  },
+  {
+    title: "Poda de altura y despeje sobre techo y líneas eléctricas",
+    description: "Poda correctiva de eucaliptos y pinos con retiro en camión de 12m³ de restos de ramas hacia cantera autorizada de Intendencia.",
+    location: "Carrasco Norte, Montevideo",
+    image: "/images/servicios/limpieza-jardineria.svg",
+    alt: "Poda de árboles y retiro de restos vegetales en Carrasco Norte",
+    tag: "Poda en Altura"
   }
 ];
 
@@ -135,6 +163,14 @@ const whatsappUrl = "https://wa.me/59896219719?text=Hola%2C%20quisiera%20solicit
       </div>
     </div>
   </section>
+
+  <!-- Technical Work Gallery -->
+  <WorkGallery
+    title="Galería de Limpiezas Finales y Parquización"
+    subtitle="Inmuebles acondicionados y entregados impecables en Montevideo y Ciudad de la Costa."
+    serviceCategory="Limpieza y Jardinería"
+    items={galleryItems}
+  />
 
   <!-- Form integration -->
   <ContactForm />

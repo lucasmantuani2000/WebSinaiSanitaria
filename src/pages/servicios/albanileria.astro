@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import WorkGallery from '../../components/WorkGallery.astro';
 
 const albanileriaServices = [
   {
@@ -35,6 +36,33 @@ const albanileriaServices = [
     title: "Apertura de Vanos y Colocación de Aberturas",
     desc: "Corte y apertura limpia de muros para nuevas puertas y ventanas, colocación nivelada de marcos de aluminio o madera y amurado con arena y portland.",
     urgente: false
+  }
+];
+
+const galleryItems = [
+  {
+    title: "Reforma completa de baño y colocación de porcelanato",
+    description: "Revestimiento en porcelanato rectificado 60x120cm con sistema de nivelación por cuñas, nicho de ducha empotrado y desagüe lineal.",
+    location: "Malvín, Montevideo",
+    image: "/images/servicios/albanileria.svg",
+    alt: "Colocación de porcelanato y reforma de baño en Malvín Montevideo",
+    tag: "Porcelanato Rectificado"
+  },
+  {
+    title: "Contrapiso reforzado con malla y carpeta niveladora",
+    description: "Vaciado de 85m² de contrapiso con pendiente para desagüe pluvial y alisado de carpeta con arena terciada en vivienda unifamiliar.",
+    location: "Ciudad de la Costa, Canelones",
+    image: "/images/servicios/albanileria.svg",
+    alt: "Contrapisos y carpetas de hormigón en Ciudad de la Costa",
+    tag: "Contrapisos de Obra"
+  },
+  {
+    title: "Levantamiento de muro medianero y revoques impermeables",
+    description: "Construcción en ticholo cerámico de 12cm con pilastras de hormigón armado, capa hidrófuga aisladora y revoque fino al fieltro.",
+    location: "Parque Batlle, Montevideo",
+    image: "/images/servicios/albanileria.svg",
+    alt: "Muros de ticholo y revoque fino en Parque Batlle Montevideo",
+    tag: "Mampostería y Revoques"
   }
 ];
 
@@ -135,6 +163,14 @@ const whatsappUrl = "https://wa.me/59896219719?text=Hola%2C%20quisiera%20solicit
       </div>
     </div>
   </section>
+
+  <!-- Technical Work Gallery -->
+  <WorkGallery
+    title="Galería de Reformas y Obras de Albañilería"
+    subtitle="Proyectos residenciales y comerciales concluidos con acabados prolijos en Montevideo y Canelones."
+    serviceCategory="Albañilería y Reformas"
+    items={galleryItems}
+  />
 
   <!-- Form integration -->
   <ContactForm />

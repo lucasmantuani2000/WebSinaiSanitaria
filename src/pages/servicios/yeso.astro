@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import WorkGallery from '../../components/WorkGallery.astro';
 
 const yesoServices = [
   {
@@ -35,6 +36,33 @@ const yesoServices = [
     title: "Placas Verdes Resistentes a la Humedad (RU)",
     desc: "Instalación especializada de placas hidrófugas con aditivos siliconados en baños, cocinas y lavaderos para soporte firme de cerámicas y porcelanatos.",
     urgente: false
+  }
+];
+
+const galleryItems = [
+  {
+    title: "División de ambientes con tabiquería acústica drywall",
+    description: "Montantes de 70mm con lana de vidrio de 50mm de espesor y doble placa de 12.5mm con aislamiento acústico comprobado de 48dB.",
+    location: "Tres Cruces, Montevideo",
+    image: "/images/servicios/yeso.svg",
+    alt: "Tabiques acústicos de yeso en Tres Cruces Montevideo",
+    tag: "Aislamiento Acústico"
+  },
+  {
+    title: "Cielorraso desmontable termoacústico para local comercial",
+    description: "Instalación de 120m² de cielorraso modular 60x60cm de fibra mineral con perfilería de aluminio lacado blanco para clínica médica.",
+    location: "Ciudad Vieja, Montevideo",
+    image: "/images/servicios/yeso.svg",
+    alt: "Cielorraso desmontable comercial en Ciudad Vieja Montevideo",
+    tag: "Cielorraso Modular"
+  },
+  {
+    title: "Garganta perimetral para luz difusa LED y frente de TV",
+    description: "Cajón suspendido con nicho pasacables oculto y cinta LED cálida integrada en sala de estar residencial.",
+    location: "Carrasco, Montevideo",
+    image: "/images/servicios/yeso.svg",
+    alt: "Cielorraso con garganta LED y muebles de yeso en Carrasco Montevideo",
+    tag: "Iluminación LED"
   }
 ];
 
@@ -135,6 +163,14 @@ const whatsappUrl = "https://wa.me/59896219719?text=Hola%2C%20quisiera%20solicit
       </div>
     </div>
   </section>
+
+  <!-- Technical Work Gallery -->
+  <WorkGallery
+    title="Galería de Cielorrasos y Muebles de Yeso"
+    subtitle="Obras de tabiquería divisoria y terminaciones en seco ejecutadas con nivelación láser en Montevideo."
+    serviceCategory="Drywall y Yeso"
+    items={galleryItems}
+  />
 
   <!-- Form integration -->
   <ContactForm />

@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import WorkGallery from '../../components/WorkGallery.astro';
 
 const herreriaServices = [
   {
@@ -35,6 +36,33 @@ const herreriaServices = [
     title: "Soldaduras in Situ y Reparaciones de Urgencia",
     desc: "Servicio de soldadora inverter a domicilio para solucionar bisagras partidas, trabas forzadas, rejas arrancadas o roturas tras intentos de intrusión.",
     urgente: true
+  }
+];
+
+const galleryItems = [
+  {
+    title: "Fabricación e instalación de rejas de seguridad en Montevideo",
+    description: "Rejas en hierro macizo redondo de 16mm con marco reforzado amurado a mampostería y doble mano de convertidor epoxi.",
+    location: "Punta Carretas, Montevideo",
+    image: "/images/servicios/herreria.svg",
+    alt: "Fabricación de rejas de seguridad en Punta Carretas Montevideo",
+    tag: "Hierro Macizo"
+  },
+  {
+    title: "Portón corredizo automatizado con estructura reforzada",
+    description: "Portón de 4.5 metros con bastidor en caño estructural 80x40mm, chapa plegada microperforada y cremallera de tracción rápida.",
+    location: "Ciudad de la Costa, Canelones",
+    image: "/images/servicios/herreria.svg",
+    alt: "Portón corredizo automatizado en Ciudad de la Costa",
+    tag: "Portón Automático"
+  },
+  {
+    title: "Soldadura de urgencia y refuerzo de portón batiente",
+    description: "Reparación in situ de bisagras colapsadas por viento con electrodo de bajo hidrógeno y refuerzo de planchuela estructural.",
+    location: "Buceo, Montevideo",
+    image: "/images/servicios/herreria.svg",
+    alt: "Soldaduras in situ de urgencia en Buceo Montevideo",
+    tag: "Soldadura Urgente"
   }
 ];
 
@@ -137,6 +165,14 @@ const whatsappUrl = "https://wa.me/59896219719?text=Hola%2C%20quisiera%20solicit
       </div>
     </div>
   </section>
+
+  <!-- Technical Work Gallery -->
+  <WorkGallery
+    title="Galería de Herrería y Estructuras Metálicas"
+    subtitle="Obras de seguridad, portones automatizados y herrería pesada instaladas en Montevideo y Canelones."
+    serviceCategory="Herrería de Obra"
+    items={galleryItems}
+  />
 
   <!-- Form integration -->
   <ContactForm />

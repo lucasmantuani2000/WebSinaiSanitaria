@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import WorkGallery from '../../components/WorkGallery.astro';
 
 const impermeabilizacionServices = [
   {
@@ -35,6 +36,33 @@ const impermeabilizacionServices = [
     title: "Membranas Líquidas Poliuretánicas y Fibradas",
     desc: "Aplicación de recubrimientos impermeables elásticos continuos sin uniones con malla de fibra de vidrio incorporada para balcones, muros y techos inclinados.",
     urgente: false
+  }
+];
+
+const galleryItems = [
+  {
+    title: "Impermeabilización de azotea con membrana asfáltica de 4mm",
+    description: "Retiro de membrana vencida, regularización de pendientes pluviales y colocación de 140m² de membrana aluminizada termo-fusionada con garantía escrita por 10 años.",
+    location: "Pocitos Nuevo, Montevideo",
+    image: "/images/servicios/impermeabilizacion.svg",
+    alt: "Impermeabilización de azotea con membrana asfáltica en Pocitos Nuevo Montevideo",
+    tag: "Membrana 4mm"
+  },
+  {
+    title: "Membrana geotextil transitable para terraza residencial",
+    description: "Aplicación de sistema transitable con terminación en pintura fibrada poliuretánica de alta resistencia a pisadas y radiación solar.",
+    location: "El Pinar, Canelones",
+    image: "/images/servicios/impermeabilizacion.svg",
+    alt: "Membrana geotextil transitable en El Pinar Canelones",
+    tag: "Geotextil Transitable"
+  },
+  {
+    title: "Sellado de pretiles y grietas en edificio de copropiedad",
+    description: "Apertura de fisuras estructurales, sellado con masa elástica de poliuretano y pintura impermeabilizante atérmica blanca.",
+    location: "Cordón, Montevideo",
+    image: "/images/servicios/impermeabilizacion.svg",
+    alt: "Sellado de filtraciones en pretiles Cordón Montevideo",
+    tag: "Sellado Poliuretánico"
   }
 ];
 
@@ -141,6 +169,14 @@ const whatsappUrl = "https://wa.me/59896219719?text=Hola%2C%20quisiera%20solicit
       </div>
     </div>
   </section>
+
+  <!-- Technical Work Gallery -->
+  <WorkGallery
+    title="Galería de Impermeabilizaciones y Aislaciones"
+    subtitle="Trabajos de membrana asfáltica termo-fusionada y sellados con garantía por escrito en Montevideo y Canelones."
+    serviceCategory="Impermeabilizaciones"
+    items={galleryItems}
+  />
 
   <!-- Form integration -->
   <ContactForm />

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="limpiezaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#115e59" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+    <linearGradient id="waterSpray" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+    <filter id="cleanSparkle" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="24" fill="url(#limpiezaBg)" />
+
+  <!-- Clean landscape geometry lines -->
+  <g opacity="0.15" stroke="#2dd4bf" stroke-width="1.5">
+    <circle cx="400" cy="220" r="160" fill="none" stroke-dasharray="6,6" />
+    <path d="M50,380 Q400,310 750,380" fill="none" stroke-width="2" />
+  </g>
+
+  <!-- Big Stylized Plant / Lawn Landscape Elements -->
+  <g transform="translate(180, 160)">
+    <!-- Leaves / Foliage -->
+    <path d="M0,120 Q30,20 120,40 Q90,100 0,120 Z" fill="url(#leafGrad)" stroke="#166534" stroke-width="2" />
+    <path d="M0,120 Q-30,20 -100,50 Q-80,110 0,120 Z" fill="url(#leafGrad)" stroke="#166534" stroke-width="2" opacity="0.85" />
+    <path d="M0,120 Q10,-30 60,-50 Q40,50 0,120 Z" fill="url(#leafGrad)" stroke="#166534" stroke-width="2" />
+    <!-- Stems -->
+    <path d="M0,120 L0,180" stroke="#15803d" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <!-- High-Pressure Washer Lance (Lanza de Hidrolavadora con Chorro de Agua) -->
+  <g transform="translate(380, 240) rotate(-22)">
+    <!-- Grip and trigger handle -->
+    <rect x="-12" y="100" width="24" height="60" rx="6" fill="#1e293b" stroke="#334155" stroke-width="2" />
+    <path d="M-6,115 C-6,130 6,130 6,115" fill="none" stroke="#eab308" stroke-width="4" stroke-linecap="round" />
+    <!-- Steel Lance barrel -->
+    <rect x="-5" y="-120" width="10" height="230" rx="2" fill="#cbd5e1" stroke="#475569" stroke-width="1.5" />
+    <!-- Nozzle tip (Boquilla abanico) -->
+    <rect x="-8" y="-135" width="16" height="15" rx="3" fill="#eab308" stroke="#ca8a04" stroke-width="1.5" />
+
+    <!-- Powerful Fan Spray (Chorro abanico de agua a presión) -->
+    <g transform="translate(0, -135)">
+      <polygon points="0,0 -80,-140 80,-140" fill="url(#waterSpray)" opacity="0.45" />
+      <line x1="0" y1="0" x2="-60" y2="-140" stroke="#ffffff" stroke-width="2" opacity="0.7" />
+      <line x1="0" y1="0" x2="60" y2="-140" stroke="#ffffff" stroke-width="2" opacity="0.7" />
+      <line x1="0" y1="0" x2="0" y2="-140" stroke="#38bdf8" stroke-width="2.5" opacity="0.8" />
+    </g>
+  </g>
+
+  <!-- Pruning Shears / Tijera de Poda Profesional -->
+  <g transform="translate(560, 260) rotate(15)">
+    <!-- Blade 1 -->
+    <path d="M0,0 C20,-30 40,-40 60,-45 C50,-20 30,-5 0,0 Z" fill="#e2e8f0" stroke="#475569" stroke-width="2" />
+    <!-- Blade 2 hook -->
+    <path d="M0,0 C-10,-25 -20,-40 -40,-45 C-30,-20 -15,-5 0,0 Z" fill="#94a3b8" stroke="#334155" stroke-width="2" />
+    <!-- Central Pivot Bolt -->
+    <circle cx="0" cy="0" r="7" fill="#eab308" stroke="#0f172a" stroke-width="2" />
+    <!-- Handles -->
+    <rect x="-8" y="5" width="16" height="90" rx="6" fill="#dc2626" stroke="#991b1b" stroke-width="2" />
+    <rect x="12" y="5" width="16" height="90" rx="6" fill="#dc2626" stroke="#991b1b" stroke-width="2" />
+  </g>
+
+  <!-- Sparkling Clean Stars (Destellos de limpieza impecable fin de obra) -->
+  <g filter="url(#cleanSparkle)">
+    <g transform="translate(240, 100)">
+      <path d="M0,-18 Q0,0 18,0 Q0,0 0,18 Q0,0 -18,0 Q0,0 0,-18 Z" fill="#ffffff" />
+      <circle cx="0" cy="0" r="3" fill="#2dd4bf" />
+    </g>
+    <g transform="translate(480, 80) scale(0.7)">
+      <path d="M0,-18 Q0,0 18,0 Q0,0 0,18 Q0,0 -18,0 Q0,0 0,-18 Z" fill="#ffffff" />
+    </g>
+    <g transform="translate(620, 160) scale(0.85)">
+      <path d="M0,-18 Q0,0 18,0 Q0,0 0,18 Q0,0 -18,0 Q0,0 0,-18 Z" fill="#2dd4bf" />
+    </g>
+  </g>
+
+  <!-- Bottom Badges -->
+  <rect x="50" y="415" width="280" height="42" rx="10" fill="#0f172a" stroke="#2dd4bf" stroke-width="1.5" opacity="0.9" />
+  <text x="190" y="441" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#ccfbf1" text-anchor="middle">FIN DE OBRA Y PARQUIZACIÓN</text>
+
+  <rect x="530" y="415" width="220" height="42" rx="10" fill="#0f172a" stroke="#22c55e" stroke-width="1.5" opacity="0.9" />
+  <text x="640" y="441" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#bbf7d0" text-anchor="middle">ENTREGA 100% LIMPIA</text>
+</svg>

@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import WorkGallery from '../../components/WorkGallery.astro';
 
 const sanitaryServices = [
   {
@@ -35,6 +36,33 @@ const sanitaryServices = [
     title: "Bombas Presurizadoras y Tanques",
     desc: "Instalación y mantenimiento de bombas de presión de agua para duchas y grifos, tanques de reserva y sistemas automáticos.",
     urgente: false
+  }
+];
+
+const galleryItems = [
+  {
+    title: "Instalación de cañerías por termofusión en Montevideo",
+    description: "Renovación integral de distribución de agua fría y caliente en termofusión de 20mm y 25mm con prueba hidráulica certificada a 10 bar.",
+    location: "Pocitos, Montevideo",
+    image: "/images/servicios/sanitaria.svg",
+    alt: "Instalación de cañerías por termofusión en Montevideo",
+    tag: "Termofusión"
+  },
+  {
+    title: "Destape mecánico de graseras y ramales de desagüe",
+    description: "Limpieza profunda con desobstructora rotativa electromecánica en cocina comercial para restaurante en zona céntrica.",
+    location: "Cordón / Centro, Montevideo",
+    image: "/images/servicios/sanitaria.svg",
+    alt: "Destape mecánico de graseras en Cordón Montevideo",
+    tag: "Destape Rotativo"
+  },
+  {
+    title: "Recambio de calefón de 80L y presurización de línea",
+    description: "Montaje sobre pared de mampostería, colillas de acero inoxidable mallado, válvula de alivio y bomba automática de bajo consumo.",
+    location: "Carrasco, Montevideo",
+    image: "/images/servicios/sanitaria.svg",
+    alt: "Instalación de calefón y válvulas en Carrasco Montevideo",
+    tag: "Instalación Termotanque"
   }
 ];
 ---
@@ -132,6 +160,14 @@ const sanitaryServices = [
       </div>
     </div>
   </section>
+
+  <!-- Technical Work Gallery -->
+  <WorkGallery
+    title="Galería de Obras Sanitarias y Reparaciones Técnicas"
+    subtitle="Intervenciones reales ejecutadas por nuestro equipo en Montevideo y Canelones con materiales de primera línea."
+    serviceCategory="Sanitaria Integral"
+    items={galleryItems}
+  />
 
   <!-- Form integration -->
   <ContactForm />

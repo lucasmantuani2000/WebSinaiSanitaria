@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import WorkGallery from '../../components/WorkGallery.astro';
 
 const pinturaServices = [
   {
@@ -35,6 +36,33 @@ const pinturaServices = [
     title: "Pintura Epoxi para Pisos y Trabajos en Altura",
     desc: "Recubrimientos de alta resistencia mecánica y química para garajes, locales comerciales y depósitos, así como pintura de muros de altura con arneses certificados.",
     urgente: false
+  }
+];
+
+const galleryItems = [
+  {
+    title: "Pintura interior con látex lavable anti-hongos en apartamento",
+    description: "Tratamiento con lavandina concentrada, fijador al agua, enduido completo y aplicación de 3 manos de látex lavable mate de primera línea.",
+    location: "Pocitos, Montevideo",
+    image: "/images/servicios/pintura.svg",
+    alt: "Pintura interior lavable en Pocitos Montevideo",
+    tag: "Látex Lavable"
+  },
+  {
+    title: "Restauración de fachada con pintura elastomérica impermeable",
+    description: "Sellado de microfisuras, hidrolavado a 180 bar y aplicación de recubrimiento elástico impermeable blanco atérmico en casona antigua.",
+    location: "Prado, Montevideo",
+    image: "/images/servicios/pintura.svg",
+    alt: "Pintura de fachada con elastomérico en Prado Montevideo",
+    tag: "Pintura de Fachadas"
+  },
+  {
+    title: "Esmalte sintético y protección anticorrosiva para herrería",
+    description: "Remoción de óxido, aplicación de dos manos de fondo cromato de zinc y esmalte sintético satinado negro grafito para rejas y portón.",
+    location: "Carrasco, Montevideo",
+    image: "/images/servicios/pintura.svg",
+    alt: "Esmalte sintético en rejas y portones en Carrasco Montevideo",
+    tag: "Protección Herrería"
   }
 ];
 
@@ -135,6 +163,14 @@ const whatsappUrl = "https://wa.me/59896219719?text=Hola%2C%20quisiera%20solicit
       </div>
     </div>
   </section>
+
+  <!-- Technical Work Gallery -->
+  <WorkGallery
+    title="Galería de Acabados en Pintura Profesional"
+    subtitle="Resultados de pintura interior lavable y restauración de fachadas ejecutados en Montevideo."
+    serviceCategory="Pintura Profesional"
+    items={galleryItems}
+  />
 
   <!-- Form integration -->
   <ContactForm />
